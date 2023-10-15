@@ -220,7 +220,7 @@ def cracker(uid, name, pww, total_idz):
     except:
         pass
 
-banner = \033[0;32m
+logo = f"""{w}\
 \033[0;32m┏┓┏┓┳┳┓  ┏┓┏┳┓
 \033[0;32m┣┫┗┓┃┃┃  ┣┫   ┃ 
 \033[0;32m┛┗┗┛┛   ┗  ┛┗   ┻ 
